@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../../../../../Downloads/ios/trivia2.jpg">
-   </FileRef>
-   <FileRef
-      location = "self:Trivia V2.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

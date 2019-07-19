@@ -11,21 +11,31 @@ import UIKit
 class ViewController: UIViewController {
 
 
-    var questions = ["What has holes but can hold water?",
-                     "What had three feet but no toes?",
-                     "What is tall when its young and short when its old?",
-                     "Who spends the day at the window, goes to the table for meals and hides at night?",
-                     "What can an elephant make that no other animal can make?",
-                     "I don’t have eyes, but once I did see. Once I had thoughts, but now I’m white and empty. What am I?",
-                     "A seven letter word containing thousands of letters?",
-                     "What word starts with the letter E ends with the letter E but only has one letter in it?",
-                     "Rearrange the letters: NOR DO WE to make one word.",
-                     "What crime can you get arrested for if you attempt it, but not if you commit it?",
-                     "Not my sister nor my brother but still the child of my mother and father. Who am I?",
-                     "What can’t be burned in a fire nor drowned in water?",
-                     "What stays where it is when it goes off?"]
+    var questions = ["1.What has holes but can hold water?",
+                     "2.What had three feet but no toes?",
+                     "3.What is tall when its young and short when its old?",
+                     "4.Who spends the day at the window, goes to the table for meals and hides at night?",
+                     "5.What can an elephant make that no other animal can make?",
+                     "6.I don’t have eyes, but once I did see. Once I had thoughts, but now I’m white and empty. What am I?",
+                     "7.A seven letter word containing thousands of letters?",
+                     "8.What word starts with the letter E ends with the letter E but only has one letter in it?",
+                     "9.Rearrange the letters: NOR DO WE to make one word.",
+                     "10.What crime can you get arrested for if you attempt it, but not if you commit it?",
+                     "11.Not my sister nor my brother but still the child of my mother and father. Who am I?",
+                     "12.What can’t be burned in a fire nor drowned in water?",
+                     "13.What stays where it is when it goes off?",
+                     "14.I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?",
+                     "15.What English word has three consecutive double letters?",
+                     "16.I come from a mine and get surrounded by wood always. Everyone uses me. What am I?",
+                     "17.What disappears as soon as you say its name?,",
+                     "18.I have keys, but no locks and space, and no rooms. You can enter, but you can’t go outside. What am I?",
+                     "19.Which word in the dictionary is always spelled incorrectly?",
+                     "20.The more you take, the more you leave behind. What am I?",
+                     "21.What word looks the same upside down and backwards?",
+                     "22.Give me food, and I will live. Give me water, and I will die. What am I?",
+                     "23.]
     var currQn = 0
-    var answers = ["Sponge", "Yardstick", "Candle", "Fly", "Baby Elephant", "Skull", "Mailbox", "Envelope", "One Word", "Suicide", "Myself", "Ice", "Alarm Clock"]
+    var answers = ["Sponge", "Yardstick", "Candle", "Fly", "Baby Elephant", "Skull", "Mailbox", "Envelope", "One Word", "Suicide", "Myself", "Ice", "Alarm Clock", "Map", "Bookkeeper", "Pencil Lead", "Silence", "Keyboard", "Incorectly", "Fingerprints", "Swims", "Fire",]
     var score = 0
     var reset = false
     
@@ -35,14 +45,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var endOfGameMessageLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var showAnswerSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         questionLabel.text = questions[currQn]
     }
     
-    @IBAction func checkButtonClick(_ sender: Any) {
-        
+    func processAnswer(){
         if(reset == true)
         {
             nextButton.setTitle("Check", for: .normal)
@@ -52,8 +62,8 @@ class ViewController: UIViewController {
             questionLabel.text = ""
             score = 0
             currQn = 0
-            return
-            
+            questionLabel.text = questions[currQn]
+            reset = false
         }
         if(userAnswerTextField.text == "")
         {
@@ -70,7 +80,14 @@ class ViewController: UIViewController {
         }
         else
         {
-            validationLabel.text = "Incorrect. The correct answer is \(correctAnswer)"
+            if (showAnswerSwitch.isOn)
+            {
+                validationLabel.text = "Incorrect. The correct answer is \(correctAnswer)"
+            }
+            else
+            {
+                validationLabel.text = "Incorrect."
+            }
         }
         
         currQn += 1
@@ -93,5 +110,11 @@ class ViewController: UIViewController {
         scoreLabel.text = "Score: \(String(score))/13"
         
     }
+    
+    @IBAction func textFieldEnterPress(_ sender: Any) {
+        processAnswer()
+    }
+    @IBAction func checkButtonClick(_ sender: Any) {
+        processAnswer()
 }
-
+}

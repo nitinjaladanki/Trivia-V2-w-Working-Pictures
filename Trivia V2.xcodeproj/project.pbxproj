@@ -12,7 +12,7 @@
 		883D21E922E146F900D6170C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883D21E722E146F900D6170C /* Main.storyboard */; };
 		883D21EB22E146FC00D6170C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883D21EA22E146FC00D6170C /* Assets.xcassets */; };
 		883D21EE22E146FC00D6170C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883D21EC22E146FC00D6170C /* LaunchScreen.storyboard */; };
-		883D21F622E1502900D6170C /* trivia2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 883D21F522E1502900D6170C /* trivia2.jpg */; };
+		883D21FA22E236A300D6170C /* trivia2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 883D21F922E236A300D6170C /* trivia2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		883D21EA22E146FC00D6170C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		883D21ED22E146FC00D6170C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		883D21EF22E146FC00D6170C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		883D21F522E1502900D6170C /* trivia2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = trivia2.jpg; path = ../../../../../../Downloads/ios/trivia2.jpg; sourceTree = "<group>"; };
+		883D21F922E236A300D6170C /* trivia2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = trivia2.jpg; path = "../../../SpurIQ Images/trivia2.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				883D21EA22E146FC00D6170C /* Assets.xcassets */,
 				883D21EC22E146FC00D6170C /* LaunchScreen.storyboard */,
 				883D21EF22E146FC00D6170C /* Info.plist */,
-				883D21F522E1502900D6170C /* trivia2.jpg */,
+				883D21F922E236A300D6170C /* trivia2.jpg */,
 			);
 			path = "Trivia V2";
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 				883D21EE22E146FC00D6170C /* LaunchScreen.storyboard in Resources */,
 				883D21EB22E146FC00D6170C /* Assets.xcassets in Resources */,
 				883D21E922E146F900D6170C /* Main.storyboard in Resources */,
-				883D21F622E1502900D6170C /* trivia2.jpg in Resources */,
+				883D21FA22E236A300D6170C /* trivia2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
